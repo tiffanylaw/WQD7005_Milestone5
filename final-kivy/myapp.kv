@@ -1,0 +1,44 @@
+<MyGrid>:
+    
+    vol: vol
+    changes: changes
+    price: price
+
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height -200
+        pos: 50, 50
+        
+        GridLayout:
+            cols:1
+            
+            Label:
+                text: "Brent Oil Price Prediction"
+                
+        GridLayout:
+            cols:2
+                
+            Label:
+                text: "Vol: "
+
+            TextInput:
+                id: vol
+                multiline:False
+
+            Label:
+                text: "Changes: "
+
+            TextInput:
+                id: changes
+                multiline:False
+            
+            Label:
+                text: "Price: "
+
+            TextInput:
+                id: price
+                multiline:False
+
+        Button:
+            text:"Submit"
+            on_press: root.btn()
